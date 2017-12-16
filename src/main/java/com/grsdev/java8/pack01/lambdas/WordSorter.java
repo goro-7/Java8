@@ -1,4 +1,4 @@
-package com.grsdev.java8season2.pack01.lambdas;
+package com.grsdev.java8.pack01.lambdas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,8 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.grsdev.java8season2.utils.TimerUtil;
-import com.grsdev.java8season2.utils.TimerUtil.TimeUnit;
+import com.grsdev.java8.utils.TimerUtil;
+import com.grsdev.java8.utils.TimerUtil.TimeUnit;
 
 import static java.lang.System.*;
 

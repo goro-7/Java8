@@ -1,4 +1,4 @@
-package com.grsdev.java8season2.utils;
+package com.grsdev.java8.utils;
 
 /**
  * @author gaurav salvi
