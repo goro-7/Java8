@@ -12,7 +12,9 @@ import com.grsdev.java8season2.utils.TimerUtil.TimeUnit;
 
 import static java.lang.System.*;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -28,6 +30,10 @@ public class WordSorter {
 	{
 		try {
 			words=Files.readAllLines(Paths.get("C:/Users/salvigau/Desktop/server_logs/Esign/DIT1/allLines.txt"));
+			words.addAll(words);
+			words.addAll(words);
+			words.addAll(words);
+			words.addAll(words);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -35,11 +41,17 @@ public class WordSorter {
 
 
 
-	public static void main(String [] args){
+	public static void main(String [] args) throws InterruptedException, IOException{
 		
-		int iteration=1000;
+		int iteration=100;
 		
 		long [] obs=new long[iteration];
+		
+		out.println("number of processors : "+ Runtime.getRuntime().availableProcessors());
+		
+		out.println(">>> enter to begin iterations >>");
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		br.readLine();
 		
 		for(int i=0;i<iteration;i++){
 		
@@ -48,11 +60,11 @@ public class WordSorter {
 		
 //		List<String> sortedWords1=sortListStyle1(words);
 
-		List<String> sortedWords2=sortListStyle2(words);
+//		List<String> sortedWords2=sortListStyle2(words);
 		
 //		List<String> sortedWords3=words.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
 		
-//		List<String> sortedWords4=words.stream().parallel().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
+		List<String> sortedWords4=words.stream().parallel().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
 
 		obs[i]=TimerUtil.showTimeElapsed(TimeUnit.NSEC);
 		
@@ -62,6 +74,8 @@ public class WordSorter {
 		
 		out.println("--> aveage = "+avg/1000000);
 		
+		out.println(">>> enter to exit program >>");
+		br.readLine();
 	}
 
 	private static List<String> sortListStyle2(List<String> words2) {
