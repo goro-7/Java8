@@ -1,4 +1,4 @@
-package com.grsdev.java8pack02.lambdas;
+package com.grsdev.java8.pack02.lambdas;
 
 import static java.lang.System.out;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.grsdev.java8pack02.lambdas.Item.Category;
+import com.grsdev.java8.pack02.lambdas.Item.Category;
 
 /**
  * @author gaurav salvi
