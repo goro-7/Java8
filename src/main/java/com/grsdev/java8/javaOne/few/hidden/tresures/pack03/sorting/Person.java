@@ -1,4 +1,4 @@
-package com.grsdev.java8.javaOne.few.hidden.tresures.pack02.sorting;
+package com.grsdev.java8.javaOne.few.hidden.tresures.pack03.sorting;
 
 import java.util.Arrays;
 import java.util.List;
