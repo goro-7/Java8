@@ -16,7 +16,7 @@ public class TimerUtil {
 		
 		long timeElapsed=System.nanoTime() - startTime;
 		
-		int divisor=1; // for nano sec
+		long divisor=1; // for nano sec
 		
 		switch(unit){
 		
@@ -26,11 +26,13 @@ public class TimerUtil {
 			
 			case SEC : divisor*=1000;
 		
-			case MSEC: divisor*=1000000; break;
+			case MSEC: divisor*=1000000L; break;
 		}
 		
+		long timeElapsedChanged=timeElapsed/divisor;
+		
 //		System.out.println("Time elpased : " + timeElapsed/divisor+" "+ unit.name().toLowerCase());
-		return timeElapsed;
+		return timeElapsedChanged;
 	}
 	
 	public enum TimeUnit {NSEC,MSEC,SEC,MIN};
