@@ -1,4 +1,4 @@
-package com.grsdev.java8.pack03.concurrency;
+package com.grsdev.java8.pack03.concurrency.pack01.basics;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

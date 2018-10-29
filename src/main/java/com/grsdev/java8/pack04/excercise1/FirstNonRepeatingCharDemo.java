@@ -16,7 +16,7 @@ import com.grsdev.java8.utils.TimerUtil.TimeUnit;
 
 import java.util.Set;
 
-public class TestExcercise01 {
+public class FirstNonRepeatingCharDemo {
 	
 	
 	public static char findFirstNonRepeatingCharUsingMap(String text) {

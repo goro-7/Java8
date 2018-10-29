@@ -1,4 +1,4 @@
-package com.grsdev.java8.pack03.concurrency;
+package com.grsdev.java8.pack03.concurrency.pack01.basics;
 
 import static java.lang.System.out;
 
@@ -6,11 +6,10 @@ public class ThreadDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		MyThread th = new MyThread();
-		th.start();
+		Thread t = new Thread(new MyThread());
+		t.start();
 		
-		
-		out.println(Thread.currentThread() + " has ended");
+		out.println("Main ended");
 	}
 
 }

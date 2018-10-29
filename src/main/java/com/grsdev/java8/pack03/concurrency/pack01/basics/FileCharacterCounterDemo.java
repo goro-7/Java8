@@ -1,4 +1,4 @@
-package com.grsdev.java8.pack03.concurrency;
+package com.grsdev.java8.pack03.concurrency.pack01.basics;
 
 import static java.lang.System.out;
 
